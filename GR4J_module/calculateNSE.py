@@ -1,6 +1,6 @@
 import numpy as np
 
-def getNSE(Qobs_mm, Q, days):
+def getNSE(Qobs_mm, Q, days, **kwargs):
     # 精度评估
     # 1. 通过调整模型参数，使得模型得到更好的拟合效果的加分，具体视Nash-Sutcliffe指数
     # 2. 假设第一年365天作为预热期，消除产流水库和汇流水库初始值选取对模拟精度的影响

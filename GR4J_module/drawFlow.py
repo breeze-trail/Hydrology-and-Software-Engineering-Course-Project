@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def draw(nStep, Q, Qobs_mm, NSE):
+def draw(days, Q, Qobs_mm, NSE, **kwargs):
     plt.rcParams["font.family"] = ["SimHei"]
     plt.show()
-    axis = np.arange(1, nStep+1)
+    axis = np.arange(1, days+1)
     plt.figure(figsize=(12, 6))
     plt.plot(axis, Q, 'r--', label='模拟径流量',linewidth=1)
     plt.plot(axis, Qobs_mm, 'k-', label='观测径流量',linewidth=1)

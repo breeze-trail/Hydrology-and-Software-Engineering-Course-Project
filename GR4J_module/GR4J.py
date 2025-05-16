@@ -1,8 +1,7 @@
 import numpy as np
 from curveCalculate import *
 
-def GR4J(x1, x2, x3, x4, upperTankRatio, lowerTankRatio, P, E, days):
-
+def GR4J(x1, x2, x3, x4, upperTankRatio, lowerTankRatio, P, E, days, **kwargs):
     # 初始化变化，存储GR4J模型中间变量值 
     Pn = np.zeros(days)   # Pn：降雨扣除损失（蒸发）后得净雨
     En = np.zeros(days)   # En：当日蒸发未被满足部分
@@ -125,5 +124,5 @@ def GR4J(x1, x2, x3, x4, upperTankRatio, lowerTankRatio, P, E, days):
         # 计算汇流总出流量
         Q[i] = Qr[i] + Qd[i]       # Pr: 记录产流总量
 
-        #输出汇流总出流量
-        return Q
+    #输出汇流总出流量
+    return Q
